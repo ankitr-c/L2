@@ -1,3 +1,7 @@
+# Author: Ankit Raut 
+
+# Description: This python script can be used for deleting VM's by the IP address associated with them.
+
 from google.cloud import  compute_v1
 from collections import defaultdict
 
