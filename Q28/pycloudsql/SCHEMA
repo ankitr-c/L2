@@ -1,0 +1,12 @@
+id	    int	            NO	PRI		
+name	varchar(255)	NO			
+email	varchar(255)	NO			
+phno	varchar(11)	    NO			
+
+
+
+Data:
+
+1358	dipali	dipali@gmail.com	9128374650
+9182	Ankit	ankit@gmail.com	    9182736450
+			
