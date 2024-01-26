@@ -1,0 +1,21 @@
+for customer supplied keys:
+
+openssl rand -base64 32
+PLZVcONNZDz0cXZQQSd3osHDt1zs7Lmbrk81WWL2igk=
+
+
+add the generated key to .boto file under Encryption uncomment encryption_key
+
+encryption_key=PLZVcONNZDz0cXZQQSd3osHDt1zs7Lmbrk81WWL2igk=
+
+cat .boto | grep -i encryption
+
+Upload Files:
+
+gsutil cp filename gs://bucket_name
+
+
+Download Files:
+
+gsutil cp gs://bucket_name/filename path
+
