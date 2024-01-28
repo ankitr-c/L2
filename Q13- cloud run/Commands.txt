@@ -1,0 +1,11 @@
+gcloud auth login
+gclout init
+gcloud auth configure-docker us-docker.pkg.dev
+
+docker buildx build path/to/artifiact/image/name/tag .
+docker push path/to/artifiact/image/name/tag
+
+gcloud run deploy service-name --image=path/to/artifiact/image/name/tag 
+gcloud run services list
+gcloud run service update-traffic service-name --to-revisions=myservice-s5sxn=10,myservice-cp9kw=90
+

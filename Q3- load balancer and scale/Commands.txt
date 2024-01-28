@@ -1,0 +1,8 @@
+sudo apt-get update
+sudo apt-get install apache2-utils
+
+ab -n 1000 -c 10 http://34.160.176.32/
+
+
+sudo apt-get install stress
+stress --cpu 2 --io 4 --vm 2 --vm-bytes 128M --timeout 100s

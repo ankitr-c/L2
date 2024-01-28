@@ -1,0 +1,19 @@
+gcloud app deploy
+
+gcloud app services list
+gcloud app versions list
+gcloud app instances list
+
+gcloud app deploy --version=v3 --no-promote
+
+gcloud app services set-traffic splits=v3=.5,v2=.5
+
+gcloud app services set-traffic --splits=20240128t095521=.5,v2=.5 --split-by=random
+
+watch curl https://melodic-furnace-304906.uc.r.appspot.com/
+
+gcloud app browse --service=my-first-service
+
+gcloud app browse --service=my-first-service --version=20210215t075851
+
+
