@@ -1,0 +1,31 @@
+[Unit]
+Description=Hello World Python App Serves On Port No:8080
+After=network.target auditd.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/mitconvocationfeedback/app/main.py
+ExecReload=/usr/bin/python3 /home/mitconvocationfeedback/app/main.py -t
+WorkingDirectory=/home/mitconvocationfeedback/app
+Restart=on-failure
+RestartPreventExitStatus=255
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
+
+
+[Unit]
+Description=My Python App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/mitconvocationfeedback/app/main.py
+WorkingDirectory=/home/mitconvocationfeedback/app/main.py
+Restart=always
+User=mitconvocationfeedback
+Group=adm
+Environment=PATH=/usr/bin/python3
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
