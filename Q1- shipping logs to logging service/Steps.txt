@@ -1,0 +1,6 @@
+Step1: Created a Vm and hosted an Apache server on it.
+Step2: Installed OPS agent on vm.
+Step3: Configured: /etc/google-cloud-ops-agent/config.yaml
+docs reference:
+https://cloud.google.com/logging/docs/agent/ops-agent/installation#restart
+https://cloud.google.com/logging/docs/agent/ops-agent/third-party/apache
